@@ -5,6 +5,8 @@ import { Modal, ModalTitle, ModalBody } from "react-bootstrap";
 import { deleteData, hideDelete } from "./../../actioncreators/library";
 
 const Delete = (props) => {
+  const {data} = props;
+  console.log(data._id);
   const handleDelete = () => {
     props.deleteData(props._id);
   };
@@ -34,7 +36,7 @@ const Delete = (props) => {
 const mapStateToProps = (state) => {
   return {
     isShowDelete: state.library.isShowDelete,
-    data: state.library.deletedata,
+    data: state.library.data, 
   };
 };
 

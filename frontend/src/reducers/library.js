@@ -24,7 +24,7 @@ const library = (state = initialState, action) => {
 
     case "LIBRARY_DELETE_DATA":
       data = state.data.filter((item) => {
-        if (item.id === action.payload._id) return false;
+        if (item.id === action.payload) return false;
         return true;
       });
       return { ...state, data: data };
